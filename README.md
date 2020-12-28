@@ -63,3 +63,7 @@ __init__() got an unexpected keyword argument 'agentConfig'
 ```
 For example, maybe you want to set just one datadog daemonset on Kubernetes (k8s).
 Then, use this.
+
+## Error reporting
+If you have problem on using this project, please report to `issue`tab  
+[issue](https://github.com/KanghoonYi/datadog-agent-nvml/issues)
