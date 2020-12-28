@@ -1,4 +1,7 @@
-FROM datadog/agent:7.21.1 AS datadog
+ARG DD_IMAGE_TAG=7.21.1
+ARG CUDA_IMAGE_TAG=10.0-runtime-ubuntu18.04
+
+FROM datadog/agent:${DD_IMAGE_TAG} AS datadog
 ARG WITH_JMX
 ARG DD_PYTHON_VERSION
 
@@ -16,7 +19,7 @@ RUN apt-get update \
  && curl https://keybase.io/justcontainers/key.asc | gpg --import \
  && gpg --verify /tmp/s6.tgz.sig /output/s6.tgz
 
-FROM nvidia/cuda:10.0-runtime-ubuntu18.04 AS release
+FROM nvidia/cuda:${CUDA_IMAGE_TAG} AS release
 
 ARG WITH_JMX
 ARG DD_PYTHON_VERSION
