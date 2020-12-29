@@ -15,9 +15,11 @@ docker build --build-arg DD_PYTHON_VERSION=3 -t datadog-nvml:latest .
 > You can use `DD_IMAGE_TAG`, `CUDA_IMAGE_TAG`, `WITH_JMX`, `DD_PYTHON_VERSION`
 
 * DD_IMAGE_TAG
+  - default: `7.21.1`
   - datadog-agent docker image tag
   - see https://hub.docker.com/r/datadog/agent
 * CUDA_IMAGE_TAG
+  - default: `10.0-runtime-ubuntu18.04`
   - Cuda docker image tag
   - see https://hub.docker.com/r/nvidia/cuda/tags?page=1&ordering=last_updated
 * WITH_JMX 
