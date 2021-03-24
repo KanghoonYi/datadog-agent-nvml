@@ -1,4 +1,4 @@
-# datadog-agent-nvml
+# datadog-agent-nvml(Docker)
 for using nvidia graphic metric on datadog   
 this project is working with docker.
 ## What is NVML?
